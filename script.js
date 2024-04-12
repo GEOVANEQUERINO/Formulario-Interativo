@@ -26,8 +26,8 @@ function validateGender() {
 function validateAge() {
     var age = document.getElementById('idade').value;
     var error = document.getElementById('ageError');
-    if (age === "" || age < 1 || age > 120) {
-        error.textContent = "Por favor, insira uma idade válida (1-120).";
+    if (age === "" || age < 1 || age > 99) {
+        error.textContent = "Por favor, insira uma idade válida (1-99).";
         return false;
     } else {
         error.textContent = "";
@@ -55,7 +55,7 @@ function submitForm() {
     var isValidLanguages = validateLanguages();
 
     if (isValidName && isValidGender && isValidAge && isValidLanguages) {
-        // Aqui você pode adicionar o código para processar e exibir o resultado
+        //código para processar e exibir o resultado
         processarResultado(); // Processa o resultado após a validação
         return true; // Todos os campos válidos
     }

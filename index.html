@@ -8,45 +8,49 @@
 </head>
 <body>
     <h2>Formulário Interativo</h2>
-    <form id="myForm" action="#" method="POST">
-        <div>
-            <label for="nome">1. Qual é o seu nome?</label><br>
-            <input type="text" id="nome" name="nome" oninput="validateName()">
-            <div id="nameError" class="error"></div>
-        </div><br>
+    <div id="form-container">
+        <form id="myForm" action="#" method="POST">
+            <div>
+                <label for="nome">1. Qual é o seu nome?</label><br>
+                <input type="text" id="nome" name="nome" oninput="validateName()">
+                <div id="nameError" class="error"></div>
+            </div><br>
 
-        <div>
-            <label>2. Qual é o seu gênero?</label><br>
-            <input type="radio" id="genero-masculino" name="genero" value="masculino" onchange="validateGender()">
-            <label for="genero-masculino">Masculino</label><br>
-            <input type="radio" id="genero-feminino" name="genero" value="feminino" onchange="validateGender()">
-            <label for="genero-feminino">Feminino</label><br>
-            <input type="radio" id="genero-outro" name="genero" value="outro" onchange="validateGender()">
-            <label for="genero-outro">Outro</label><br>
-            <div id="genderError" class="error"></div>
-        </div><br>
+            <div>
+                <label>2. Qual é o seu gênero?</label><br>
+                <input type="radio" id="genero-masculino" name="genero" value="masculino" onchange="validateGender()">
+                <label for="genero-masculino">Masculino</label><br>
+                <input type="radio" id="genero-feminino" name="genero" value="feminino" onchange="validateGender()">
+                <label for="genero-feminino">Feminino</label><br>
+                <input type="radio" id="genero-outro" name="genero" value="outro" onchange="validateGender()">
+                <label for="genero-outro">Outro</label><br>
+                <div id="genderError" class="error"></div>
+            </div><br>
 
-        <div>
-            <label>3. Qual é sua idade?</label><br>
-            <input type="number" id="idade" name="idade" min="1" max="120" onchange="validateAge()">
-            <div id="ageError" class="error"></div>
-        </div><br>
+            <div>
+                <label>3. Qual é sua idade?</label><br>
+                <input type="number" id="idade" name="idade" min="1" max="120" onchange="validateAge()">
+                <div id="ageError" class="error"></div>
+            </div><br>
 
-        <div>
-            <label>4. Quais são as suas linguagens de programação favoritas? (Selecione todas as aplicáveis)</label><br>
-            <input type="checkbox" id="linguagem-java" name="linguagem[]" value="Java">
-            <label for="linguagem-java">Java</label><br>
-            <input type="checkbox" id="linguagem-python" name="linguagem[]" value="Python">
-            <label for="linguagem-python">Python</label><br>
-            <input type="checkbox" id="linguagem-javascript" name="linguagem[]" value="JavaScript">
-            <label for="linguagem-javascript">JavaScript</label><br>
-            <input type="checkbox" id="linguagem-cpp" name="linguagem[]" value="C++">
-            <label for="linguagem-cpp">C++</label><br>
-            <div id="langError" class="error"></div>
-        </div><br>
+            <div>
+                <label>4. Quais são as suas linguagens de programação favoritas? (Selecione todas as aplicáveis)</label><br>
+                <input type="checkbox" id="linguagem-java" name="linguagem[]" value="Java">
+                <label for="linguagem-java">Java</label><br>
+                <input type="checkbox" id="linguagem-python" name="linguagem[]" value="Python">
+                <label for="linguagem-python">Python</label><br>
+                <input type="checkbox" id="linguagem-javascript" name="linguagem[]" value="JavaScript">
+                <label for="linguagem-javascript">JavaScript</label><br>
+                <input type="checkbox" id="linguagem-cpp" name="linguagem[]" value="C++">
+                <label for="linguagem-cpp">C++</label><br>
+                <div id="langError" class="error"></div>
+            </div><br>
 
-        <input type="button" value="Enviar" onclick="submitForm()">
-    </form>
+            <div class="button-container">
+                <input type="button" value="Enviar" onclick="submitForm()">
+            </div>
+        </form>
+    </div>
 
     <script src="script.js"></script>
 </body>
